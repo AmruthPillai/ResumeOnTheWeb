@@ -1,8 +1,23 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import ThemeProvider from "contexts/ThemeProvider";
+import Head from "next/head";
+import type { AppProps } from "next/app";
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
-}
+import "animate.css";
+import "tippy.js/dist/tippy.css";
+import "styles/globals.css";
 
-export default MyApp
+const App = ({ Component, pageProps }: AppProps) => {
+  return (
+    <>
+      <Head>
+        <title>Amruth Pillai - Resume on the Web</title>
+      </Head>
+
+      <ThemeProvider>
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </>
+  );
+};
+
+export default App;
