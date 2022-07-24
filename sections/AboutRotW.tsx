@@ -25,7 +25,7 @@ const AboutRotW = () => (
 
       <p>
         This version of the project was built using NextJS (React), Tailwind CSS for their utility-first classes and
-        Firebase to host the site.
+        Vercel to host the site.
       </p>
 
       <p>

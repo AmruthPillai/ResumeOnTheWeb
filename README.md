@@ -33,7 +33,7 @@ To check out the live version of the site in all of it's glory, head over to:
 
 I constantly update it to match who I am, because just like this website, I don't have a static personality. I use the latest technologies and use this platform to challenge myself into learning new frameworks, new build tools, experiment with new design ideas while keeping the core principle of getting to know me as simple as possible.
 
-This version of the project was built using [NextJS](https://www.nextjs.org/) (React) and [Tailwind CSS](https://tailwindcss.com/) for their utility-first classes and [Vercel](https://vercel.com/) to host the site.
+This version of the project was built using [NextJS](https://www.nextjs.org/) (React), [Tailwind CSS](https://tailwindcss.com/) for their utility-first classes and [Vercel](https://vercel.com/) to host the site.
 
 I hope you loved the site as much as I enjoyed developing it and learning from it. If you did, please let me know using the [contact form](#contact) on the website, I would be **ecstatic** to hear from you.
 
