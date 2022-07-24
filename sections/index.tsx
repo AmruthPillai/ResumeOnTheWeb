@@ -11,3 +11,8 @@ export { default as Skills } from "./Skills";
 export { default as WorkExperience } from "./WorkExperience";
 export { default as Photography } from "./Photography";
 export { default as Music } from "./Music";
+export { default as Designs } from "./Designs";
+export { default as Resume } from "./Resume";
+export { default as Contact } from "./Contact";
+export { default as AboutRotW } from "./AboutRotW";
+export { default as Footer } from "./Footer";

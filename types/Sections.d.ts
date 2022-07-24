@@ -52,3 +52,12 @@ export type InstagramMedia = {
   permalink: string;
   media_type: "IMAGE" | "VIDEO" | "CAROUSEL_ALBUM" | "REELS";
 };
+
+export type DribbbleShot = {
+  id: number;
+  title: string;
+  html_url: string;
+  images: {
+    hidpi: string;
+  }
+};

@@ -9,7 +9,7 @@ const Header: React.FC = () => {
   const { width } = useWindowDimensions();
 
   return (
-    <div className="h-screen grid place-items-center place-content-center gap-4">
+    <div id="header" className="h-screen grid place-items-center place-content-center gap-4">
       {/* Photo Wall */}
       <NoSSR>
         <PhotoWall size={width > Breakpoints.sm ? 384 : 256} />

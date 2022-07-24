@@ -41,11 +41,8 @@ const AboutMe = () => (
 
         <p>
           I created this website so I could showcase all this and through this process, make it easier for you to
-          connect with me. If you like what you see, head over to the{" "}
-          <a href="">
-            <strong>contact section</strong>
-          </a>{" "}
-          below and send me a text. I would love to hear from you!
+          connect with me. If you like what you see, head over to the <a href="#contact">contact section</a> below and
+          send me a text. I would love to hear from you!
         </p>
       </div>
     </div>

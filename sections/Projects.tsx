@@ -3,6 +3,7 @@ import ImageLink from "components/ImageLink";
 import projectsList from "data/projects";
 import Button from "components/Button";
 import { openURLInNewTab } from "utils";
+import links from "data/links";
 import Tippy from "@tippyjs/react";
 import { BiLinkExternal } from "react-icons/bi";
 import { FaDev, FaGithub } from "react-icons/fa";
@@ -15,9 +16,9 @@ const Projects = () => (
       {projectsList.map((project) => (
         <div key={project.id} className="flex flex-col gap-2">
           <ImageLink
-            size={250}
             alt={project.name}
             src={project.image}
+            dimensions={{ width: 500, height: 250 }}
             href={project.link?.web || project.link?.github}
           />
 
@@ -50,11 +51,9 @@ const Projects = () => (
       ))}
     </div>
 
-    <div className="mt-5 inline-block">
-      <Button icon={FaGithub} onClick={() => openURLInNewTab("https://pillai.xyz/github")}>
-        Projects on GitHub
-      </Button>
-    </div>
+    <Button icon={FaGithub} className="mt-8" onClick={() => openURLInNewTab(links.github)}>
+      Projects on GitHub
+    </Button>
   </div>
 );
 

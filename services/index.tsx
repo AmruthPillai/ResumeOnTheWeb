@@ -1,5 +1,6 @@
-import { Article, InstagramMedia } from "types/Sections";
+import { Article, DribbbleShot, InstagramMedia } from "types/Sections";
 import cached_instagramMedia from "public/cached/instagramMedia.json";
+import cached_dribbbleShots from "public/cached/dribbbleShots.json";
 
 export const getArticles = async (): Promise<Article[]> => {
   const pageSize = 6;
@@ -35,5 +36,22 @@ export const getInstagramMedia = async (): Promise<InstagramMedia[]> => {
     return data;
   } catch {
     return cached_instagramMedia.data as InstagramMedia[];
+  }
+};
+
+export const getDribbbleShots = async (): Promise<DribbbleShot[]> => {
+  const accessToken = process.env.DRIBBBLE_ACCESS_TOKEN;
+
+  if (!accessToken) return cached_dribbbleShots as DribbbleShot[];
+
+  const url = `https://api.dribbble.com/v2/user/shots`;
+
+  try {
+    const res = await fetch(url, { headers: { Authorization: `Bearer ${accessToken}` } });
+    const data = (await res.json()) as DribbbleShot[];
+
+    return data;
+  } catch {
+    return cached_dribbbleShots as DribbbleShot[];
   }
 };

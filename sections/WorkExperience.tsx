@@ -150,10 +150,10 @@ type Props = {
 };
 
 const WorkExperience: React.FC<Props> = ({ data, isFirst, isLast }) => (
-  <div className="flex">
+  <div className="flex group">
     <div className={clsx("ml-1 w-1 flex-shrink-0 bg-neutral-500/25", { "rounded-t": isFirst, "rounded-b": isLast })} />
 
-    <div className="-ml-2 mt-8 flex-shrink-0 relative w-3 h-3 rounded-full shadow-lg bg-teal-500/80 dark:bg-white/80" />
+    <div className="-ml-2 mt-8 flex-shrink-0 relative w-3 h-3 rounded-full shadow-lg bg-teal-500/80 dark:bg-white/80 dark:group-hover:w-6 transition-[width]" />
 
     <div className="mt-5 ml-8 grid gap-2 pb-2">
       <div className="relative w-[100px] h-[40px]">

@@ -88,19 +88,19 @@ const Skills = () => (
   <div id="skills">
     <Heading icon={FaTools}>Skills</Heading>
 
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+    <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
       {skills.map((skill) => (
         <div
           key={skill.id}
-          className="px-4 py-2 border border-neutral-50/10 hover:border-neutral-50/30 rounded flex items-center gap-4"
+          className="px-4 py-2 border border-neutral-50/10 hover:border-neutral-50/30 rounded flex items-center gap-4 transition-colors duration-1000 hover:duration-200"
         >
           <div className="w-5 h-5">
             <Image src={skill.icon} width={20} height={20} alt={skill.name} objectFit="contain" />
           </div>
 
-          <div className="flex flex-col">
+          <div className="min-w-0 flex-1 flex flex-col">
             <strong>{skill.name}</strong>
-            <small>({skill.technologies.join(", ")})</small>
+            <small className="truncate">({skill.technologies.join(", ")})</small>
           </div>
         </div>
       ))}
