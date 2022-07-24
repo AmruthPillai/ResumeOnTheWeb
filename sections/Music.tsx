@@ -1,15 +1,14 @@
 import Button from "components/Button";
-import Heading from "components/Heading";
-import { openURLInNewTab } from "utils";
+import { getSectionHeading, openURLInNewTab } from "utils";
+import { Section } from "types/Sections";
 import { FaSpotify } from "react-icons/fa";
-import { MdMusicNote } from "react-icons/md";
 
 const Music = () => (
-  <div id="music">
-    <Heading icon={MdMusicNote}>Music</Heading>
+  <div id={Section.Music}>
+    {getSectionHeading(Section.Music)}
 
     <div className="grid md:grid-cols-3 gap-12">
-      <div className="max-w-full prose prose-neutral dark:prose-invert">
+      <div className="max-w-full prose prose-sm md:prose-base prose-neutral dark:prose-invert">
         <p>
           If you&apos;ve read about my profile so far and you found it interesting, studies show that knowing what type
           of music a person listens to would say a lot about them.
@@ -36,7 +35,7 @@ const Music = () => (
         height="512"
         frameBorder="0"
         allow="encrypted-media"
-        className="rounded col-span-2"
+        className="hidden md:block rounded col-span-2"
       />
     </div>
   </div>

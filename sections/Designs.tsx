@@ -1,21 +1,19 @@
-import Heading from "components/Heading";
-import { DribbbleShot } from "types/Sections";
+import { DribbbleShot, Section } from "types/Sections";
 import ImageLink from "components/ImageLink";
 import Button from "components/Button";
-import { openURLInNewTab } from "utils";
+import { getSectionHeading, openURLInNewTab } from "utils";
 import links from "data/links";
 import { FiDribbble } from "react-icons/fi";
-import { FaPaintBrush } from "react-icons/fa";
 
 type Props = {
   dribbbleShots: DribbbleShot[];
 };
 
 const Designs: React.FC<Props> = ({ dribbbleShots }) => (
-  <div id="designs">
-    <Heading icon={FaPaintBrush}>Designs</Heading>
+  <div id={Section.Designs}>
+    {getSectionHeading(Section.Designs)}
 
-    <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-8">
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
       {dribbbleShots.slice(0, 10).map((media) => (
         <ImageLink
           key={media.id}

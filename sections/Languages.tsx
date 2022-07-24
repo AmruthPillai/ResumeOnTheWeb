@@ -1,14 +1,14 @@
-import Heading from "components/Heading";
 import languagesList from "data/languages";
+import { Section } from "types/Sections";
+import { getSectionHeading } from "utils";
 import Typewriter from "typewriter-effect";
-import { FaSignLanguage } from "react-icons/fa";
 import clsx from "clsx";
 import { Fragment } from "react";
 
 const Languages: React.FC = () => {
   return (
-    <div id="languages">
-      <Heading icon={FaSignLanguage}>Languages</Heading>
+    <div id={Section.Languages} className="w-full">
+      {getSectionHeading(Section.Languages)}
 
       <div className="h-[180px] flex flex-col justify-center">
         <Typewriter
@@ -30,7 +30,7 @@ const Languages: React.FC = () => {
         />
       </div>
 
-      <div className="flex gap-5 prose prose-sm prose-neutral dark:prose-invert">
+      <div className="flex flex-wrap gap-5 prose prose-sm prose-neutral dark:prose-invert">
         {languagesList.map(({ id, language }, index) => (
           <Fragment key={id}>
             <span>{language}</span>

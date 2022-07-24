@@ -1,11 +1,11 @@
-import Heading from "components/Heading";
 import achievementList from "data/achievements";
-import { FaAward } from "react-icons/fa";
+import { Section } from "types/Sections";
+import { getSectionHeading } from "utils";
 import { MdChevronRight } from "react-icons/md";
 
 const Achievements = () => (
-  <div id="achievements">
-    <Heading icon={FaAward}>Achievements</Heading>
+  <div id={Section.Achievements}>
+    {getSectionHeading(Section.Achievements)}
 
     <div className="grid gap-4">
       {achievementList.map((achievement) => (

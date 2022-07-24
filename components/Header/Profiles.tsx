@@ -61,7 +61,7 @@ const Profiles: React.FC = () => (
     {profiles.map(({ title, link, icon: Icon, className }, index) => (
       <Tippy key={title} content={title} placement="bottom">
         <span
-          className={clsx("p-1 text-sm rounded-full", "animate__animated animate__fadeIn", className)}
+          className={clsx("p-1 text-sm text-white rounded-full", "animate__animated animate__fadeIn", className)}
           style={{ animationDelay: `${index * 0.5 + 6}s` }}
         >
           <a href={link} target="_blank" rel="noreferrer">

@@ -1,11 +1,11 @@
-import Heading from "components/Heading";
 import philantrophyList from "data/philantrophy";
-import { BiDonateHeart } from "react-icons/bi";
+import { Section } from "types/Sections";
+import { getSectionHeading } from "utils";
 import { MdChevronRight } from "react-icons/md";
 
 const Philantrophy = () => (
-  <div id="philantrophy">
-    <Heading icon={BiDonateHeart}>Philantrophy</Heading>
+  <div id={Section.Philantrophy}>
+    {getSectionHeading(Section.Philantrophy)}
 
     <div className="grid gap-4">
       {philantrophyList.map((philantrophy) => (

@@ -1,17 +1,17 @@
-import Heading from "components/Heading";
+import { Section } from "types/Sections";
+import { getSectionHeading } from "utils";
 import Image from "next/image";
-import { MdPerson } from "react-icons/md";
 
 const AboutMe = () => (
-  <div id="about-me">
-    <Heading icon={MdPerson}>About Me</Heading>
+  <div id={Section.AboutMe}>
+    {getSectionHeading(Section.AboutMe)}
 
     <div className="grid md:grid-cols-4 gap-12">
       <div className="relative col-span-1 hidden md:block">
         <Image src="/images/about-me/selfie-boy.svg" layout="fill" alt="Selfie Boy" />
       </div>
 
-      <div className="col-span-3 max-w-full prose prose-neutral dark:prose-invert">
+      <div className="col-span-3 max-w-full prose prose-sm md:prose-base prose-neutral dark:prose-invert">
         <p>Hey there!</p>
 
         <p>

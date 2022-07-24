@@ -1,6 +1,7 @@
-import Heading from "components/Heading";
+import { Section } from "types/Sections";
+import { getSectionHeading } from "utils";
 import Image from "next/image";
-import { MdMoreHoriz, MdSchool } from "react-icons/md";
+import { MdMoreHoriz } from "react-icons/md";
 import clsx from "clsx";
 import { useState } from "react";
 import Tippy from "@tippyjs/react";
@@ -72,7 +73,7 @@ const Education: React.FC<Props> = ({ data, isFirst, isLast }) => (
       })}
     />
 
-    <div className="-ml-2 mt-8 flex-shrink-0 relative w-3 h-3 rounded-full shadow-lg bg-teal-500/80 dark:bg-white/80 dark:group-hover:w-6 transition-[width]" />
+    <div className="-ml-2 mt-8 flex-shrink-0 relative w-3 h-3 rounded-full shadow-lg bg-teal-500/80 dark:bg-white/80 group-hover:w-6 transition-[width]" />
 
     <div className="mt-5 ml-8 grid gap-2 pb-2">
       <div className="relative w-9 h-9">
@@ -103,8 +104,8 @@ const EducationTimeline = () => {
   const [showMore, setShowMore] = useState(education.length > DISPLAY_COUNT ? false : true);
 
   return (
-    <div id="education">
-      <Heading icon={MdSchool}>Education</Heading>
+    <div id={Section.Education}>
+      {getSectionHeading(Section.Education)}
 
       <div className="flex flex-col">
         {education

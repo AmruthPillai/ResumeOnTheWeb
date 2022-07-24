@@ -1,11 +1,11 @@
-import Heading from "components/Heading";
 import certificationsList from "data/certifications";
-import { AiFillSafetyCertificate } from "react-icons/ai";
+import { Section } from "types/Sections";
+import { getSectionHeading } from "utils";
 import { MdChevronRight } from "react-icons/md";
 
 const Certifications = () => (
-  <div id="certifications">
-    <Heading icon={AiFillSafetyCertificate}>Certifications</Heading>
+  <div id={Section.Certifications}>
+    {getSectionHeading(Section.Certifications)}
 
     <div className="grid gap-4">
       {certificationsList.map((certification) => (

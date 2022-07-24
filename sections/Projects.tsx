@@ -1,16 +1,16 @@
-import Heading from "components/Heading";
 import ImageLink from "components/ImageLink";
 import projectsList from "data/projects";
 import Button from "components/Button";
-import { openURLInNewTab } from "utils";
+import { getSectionHeading, openURLInNewTab } from "utils";
 import links from "data/links";
+import { Section } from "types/Sections";
 import Tippy from "@tippyjs/react";
 import { BiLinkExternal } from "react-icons/bi";
-import { FaDev, FaGithub } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
 const Projects = () => (
-  <div id="projects">
-    <Heading icon={FaDev}>Projects</Heading>
+  <div id={Section.Projects}>
+    {getSectionHeading(Section.Projects)}
 
     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
       {projectsList.map((project) => (

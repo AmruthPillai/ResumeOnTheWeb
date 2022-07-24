@@ -1,10 +1,8 @@
-import Heading from "components/Heading";
-import { InstagramMedia } from "types/Sections";
+import { InstagramMedia, Section } from "types/Sections";
 import ImageLink from "components/ImageLink";
 import Button from "components/Button";
-import { openURLInNewTab } from "utils";
+import { getSectionHeading, openURLInNewTab } from "utils";
 import links from "data/links";
-import { MdCamera } from "react-icons/md";
 import { FaInstagram } from "react-icons/fa";
 
 type Props = {
@@ -12,10 +10,10 @@ type Props = {
 };
 
 const Photography: React.FC<Props> = ({ instagramMedia }) => (
-  <div id="photography">
-    <Heading icon={MdCamera}>Photography</Heading>
+  <div id={Section.Photography}>
+    {getSectionHeading(Section.Photography)}
 
-    <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-8">
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
       {instagramMedia
         .filter((media) => media.media_type === "IMAGE")
         .slice(0, 10)

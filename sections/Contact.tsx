@@ -1,6 +1,7 @@
 import Button from "components/Button";
-import Heading from "components/Heading";
 import Input from "components/Input";
+import { Section } from "types/Sections";
+import { getSectionHeading } from "utils";
 import { useFormspark } from "@formspark/use-formspark";
 import { useForm } from "react-hook-form";
 import { FaPaperPlane } from "react-icons/fa";
@@ -23,13 +24,14 @@ const Contact = () => {
   const onSubmit = handleSubmit(async (data) => submit(data));
 
   return (
-    <div id="contact" className="lg:w-1/2">
-      <Heading icon={FaPaperPlane}>Contact</Heading>
+    <div id={Section.Contact} className="lg:w-1/2">
+      {getSectionHeading(Section.Contact)}
 
       <form onSubmit={onSubmit} className="grid gap-8">
         <Input
+          type="text"
           label="Full Name"
-          className="w-3/4"
+          className="md:w-3/4"
           hasError={!!errors.name}
           placeholder="Regina Phalange"
           description={errors.name?.message || "The one where you tell me your name"}
@@ -38,7 +40,7 @@ const Contact = () => {
 
         <Input
           type="email"
-          className="w-3/4"
+          className="md:w-3/4"
           label="Email Address"
           hasError={!!errors.email}
           placeholder="regina@centralperk.com"

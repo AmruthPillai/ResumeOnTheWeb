@@ -1,14 +1,14 @@
 import Button from "components/Button";
-import Heading from "components/Heading";
 import links from "data/links";
-import { openURLInNewTab } from "utils";
-import { MdInfo, MdStar } from "react-icons/md";
+import { getSectionHeading, openURLInNewTab } from "utils";
+import { Section } from "types/Sections";
+import { MdStar } from "react-icons/md";
 
 const AboutRotW = () => (
-  <div id="about-rotw">
-    <Heading icon={MdInfo}>About Resume on the Web</Heading>
+  <div id={Section.AboutRotW}>
+    {getSectionHeading(Section.AboutRotW)}
 
-    <div className="w-full lg:w-3/4 max-w-full prose prose-neutral dark:prose-invert">
+    <div className="w-full lg:w-3/4 max-w-full prose prose-sm md:prose-base prose-neutral dark:prose-invert">
       <p>
         <strong>Resume on the Web</strong> has been a project that I&apos;ve been focused on since the early 2014s. I
         didn&apos;t want my information to be displayed on just a sheet of paper that only HRs or Talent Scouts had the

@@ -1,29 +1,22 @@
-import Heading from "components/Heading";
 import ImageLink from "components/ImageLink";
-import { formatDateString, openURLInNewTab } from "utils";
+import { formatDateString, getSectionHeading, openURLInNewTab } from "utils";
 import Button from "components/Button";
 import links from "data/links";
-import { MdBook } from "react-icons/md";
+import { Article, Section } from "types/Sections";
 import { FaDev } from "react-icons/fa";
-import type { Article } from "types/Sections";
 
 type Props = {
   articles: Article[];
 };
 
 const Blog: React.FC<Props> = ({ articles }) => (
-  <div id="blog">
-    <Heading icon={MdBook}>Blog</Heading>
+  <div id={Section.Blog}>
+    {getSectionHeading(Section.Blog)}
 
-    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {articles.map((article) => (
         <div key={article.id} className="flex flex-col gap-2">
-          <ImageLink
-            href={article.url}
-            alt={article.title}
-            src={article.social_image}
-            dimensions={{ width: 500, height: 250 }}
-          />
+          <ImageLink href={article.url} alt={article.title} src={article.social_image} height={250} />
 
           <div>
             <h4 className="text-lg font-bold truncate">{article.title}</h4>

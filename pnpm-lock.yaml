@@ -10,6 +10,7 @@ specifiers:
   '@types/node': 18.0.3
   '@types/react': 18.0.15
   '@types/react-dom': 18.0.6
+  '@types/react-scroll': ^1.8.4
   animate.css: ^4.1.1
   autoprefixer: ^10.4.7
   clsx: ^1.2.1
@@ -27,6 +28,7 @@ specifiers:
   react-dom: 18.2.0
   react-hook-form: ^7.33.1
   react-icons: ^4.4.0
+  react-scroll: ^1.8.7
   tailwindcss: ^3.1.5
   tippy.js: ^6.3.7
   typescript: 4.7.4
@@ -45,6 +47,7 @@ dependencies:
   react-dom: 18.2.0_react@18.2.0
   react-hook-form: 7.33.1_react@18.2.0
   react-icons: 4.4.0_react@18.2.0
+  react-scroll: 1.8.7_biqbaboplfbrettd7655fr4n2y
   tippy.js: 6.3.7
   typewriter-effect: 2.19.0_biqbaboplfbrettd7655fr4n2y
 
@@ -55,6 +58,7 @@ devDependencies:
   '@types/node': 18.0.3
   '@types/react': 18.0.15
   '@types/react-dom': 18.0.6
+  '@types/react-scroll': 1.8.4
   autoprefixer: 10.4.7_postcss@8.4.14
   eslint: 8.19.0
   eslint-config-next: 12.2.0_4x5o4skxv6sl53vpwefgt23khm
@@ -643,6 +647,12 @@ packages:
 
   /@types/react-dom/18.0.6:
     resolution: {integrity: sha512-/5OFZgfIPSwy+YuIBP/FgJnQnsxhZhjjrnxudMddeblOouIodEQ75X14Rr4wGSG/bknL+Omy9iWlLo1u/9GzAA==}
+    dependencies:
+      '@types/react': 18.0.15
+    dev: true
+
+  /@types/react-scroll/1.8.4:
+    resolution: {integrity: sha512-DpHA9PYw42/rBrfKbGE/kAEvHRfyDL/ACfKB/ORWUYuCLi/yGrntxSzYXmg/7TLgQsJ5ma13GCDOzFSOz+8XOA==}
     dependencies:
       '@types/react': 18.0.15
     dev: true
@@ -2083,6 +2093,10 @@ packages:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
     dev: true
 
+  /lodash.throttle/4.1.1:
+    resolution: {integrity: sha512-wIkUCfVKpVsWo3JSZlc+8MB5it+2AN5W8J7YVMST30UrvcQNZ1Okbj+rbVniijTWE6FGYy4XJq/rHkas8qJMLQ==}
+    dev: false
+
   /lodash/4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
     dev: false
@@ -2504,6 +2518,18 @@ packages:
 
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
+
+  /react-scroll/1.8.7_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-fBOIwweAlhicx8RqP9tQXn/Uhd+DTtVRjw+0VBsIn1Z+MjRYLhTZ0tMoTAU1vOD3dce8mI6copexI4yWII+Luw==}
+    peerDependencies:
+      react: ^15.5.4 || ^16.0.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^15.5.4 || ^16.0.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      lodash.throttle: 4.1.1
+      prop-types: 15.8.1
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
 
   /react/18.2.0:
     resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}

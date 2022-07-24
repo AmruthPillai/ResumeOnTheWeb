@@ -37,7 +37,7 @@ type Props = {
 };
 
 const Home: NextPage<Props> = ({ articles, dribbbleShots, instagramMedia }) => (
-  <div className="grid gap-24">
+  <div className="w-5/6 mx-auto md:container grid gap-24">
     <Header />
 
     <AboutMe />

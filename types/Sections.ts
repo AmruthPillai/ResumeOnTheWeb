@@ -1,3 +1,32 @@
+import type { IconType } from "react-icons";
+
+export enum Section {
+  "AboutMe" = "about-me",
+  "Achievements" = "achievements",
+  "Blog" = "blog",
+  "Certifications" = "certifications",
+  "Education" = "education",
+  "Languages" = "languages",
+  "Philantrophy" = "philantrophy",
+  "Projects" = "projects",
+  "Skills" = "skills",
+  "WorkExperience" = "work-experience",
+  "Photography" = "photography",
+  "Music" = "music",
+  "Designs" = "designs",
+  "Resume" = "resume",
+  "Contact" = "contact",
+  "AboutRotW" = "aboutrotw",
+}
+
+export type SectionMap = Record<Section, { icon: IconType; title: string }>;
+
+export type SectionArray = {
+  id: Section;
+  title: string;
+  icon: IconType;
+}[];
+
 export type Article = {
   id: number;
   title: string;
@@ -59,5 +88,5 @@ export type DribbbleShot = {
   html_url: string;
   images: {
     hidpi: string;
-  }
+  };
 };
