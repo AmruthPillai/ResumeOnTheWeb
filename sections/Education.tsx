@@ -1,11 +1,11 @@
+import Tippy from "@tippyjs/react";
+import clsx from "clsx";
+import Image from "next/image";
+import { useState } from "react";
+import { FaLocationArrow } from "react-icons/fa";
+import { MdMoreHoriz } from "react-icons/md";
 import { Section } from "types/Sections";
 import { getSectionHeading } from "utils";
-import Image from "next/image";
-import { MdMoreHoriz } from "react-icons/md";
-import clsx from "clsx";
-import { useState } from "react";
-import Tippy from "@tippyjs/react";
-import { FaLocationArrow } from "react-icons/fa";
 
 const DISPLAY_COUNT = 4;
 

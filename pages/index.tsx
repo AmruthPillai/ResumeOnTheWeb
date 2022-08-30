@@ -1,26 +1,26 @@
-import { getArticles, getDribbbleShots, getInstagramMedia } from "services";
+import type { GetServerSideProps, NextPage } from "next";
 import {
   AboutMe,
+  AboutRotW,
   Achievements,
   Blog,
   Certifications,
+  Contact,
+  Designs,
   Education,
+  Footer,
   Header,
   Languages,
+  Music,
   Philantrophy,
+  Photography,
   Projects,
+  Resume,
   Skills,
   WorkExperience,
-  Photography,
-  Music,
-  Designs,
-  Resume,
-  Contact,
-  AboutRotW,
-  Footer,
 } from "sections";
+import { getArticles, getDribbbleShots, getInstagramMedia } from "services";
 import type { Article, DribbbleShot, InstagramMedia } from "types/Sections";
-import type { GetServerSideProps, NextPage } from "next";
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const articles = await getArticles();

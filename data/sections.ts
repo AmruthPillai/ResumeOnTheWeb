@@ -1,8 +1,8 @@
-import { Section, SectionArray, SectionMap } from "types/Sections";
-import { MdBook, MdCamera, MdInfo, MdMusicNote, MdPerson, MdSchool, MdWork } from "react-icons/md";
-import { FaAward, FaDev, FaFilePdf, FaPaintBrush, FaPaperPlane, FaSignLanguage, FaTools } from "react-icons/fa";
 import { AiFillSafetyCertificate } from "react-icons/ai";
 import { BiDonateHeart } from "react-icons/bi";
+import { FaAward, FaDev, FaFilePdf, FaPaintBrush, FaPaperPlane, FaSignLanguage, FaTools } from "react-icons/fa";
+import { MdBook, MdCamera, MdInfo, MdMusicNote, MdPerson, MdSchool, MdWork } from "react-icons/md";
+import { Section, SectionArray, SectionMap } from "types/Sections";
 
 const sectionsList: SectionMap = {
   [Section.AboutMe]: {
@@ -68,9 +68,13 @@ const sectionsList: SectionMap = {
   [Section.AboutRotW]: {
     icon: MdInfo,
     title: "About Resume on the Web",
-  }
+  },
 };
 
-export const sectionsArray: SectionArray = Object.entries(sectionsList).map(([id, {icon, title}]) => ({ id: id as Section, icon, title }));
+export const sectionsArray: SectionArray = Object.entries(sectionsList).map(([id, { icon, title }]) => ({
+  id: id as Section,
+  icon,
+  title,
+}));
 
 export default sectionsList;

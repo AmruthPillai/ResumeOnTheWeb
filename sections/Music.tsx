@@ -1,7 +1,7 @@
 import Button from "components/Button";
-import { getSectionHeading, openURLInNewTab } from "utils";
-import { Section } from "types/Sections";
 import { FaSpotify } from "react-icons/fa";
+import { Section } from "types/Sections";
+import { getSectionHeading, openURLInNewTab } from "utils";
 
 const Music = () => (
   <div id={Section.Music}>

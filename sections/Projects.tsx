@@ -1,12 +1,12 @@
-import ImageLink from "components/ImageLink";
-import projectsList from "data/projects";
-import Button from "components/Button";
-import { getSectionHeading, openURLInNewTab } from "utils";
-import links from "data/links";
-import { Section } from "types/Sections";
 import Tippy from "@tippyjs/react";
+import Button from "components/Button";
+import ImageLink from "components/ImageLink";
+import links from "data/links";
+import projectsList from "data/projects";
 import { BiLinkExternal } from "react-icons/bi";
 import { FaGithub } from "react-icons/fa";
+import { Section } from "types/Sections";
+import { getSectionHeading, openURLInNewTab } from "utils";
 
 const Projects = () => (
   <div id={Section.Projects}>

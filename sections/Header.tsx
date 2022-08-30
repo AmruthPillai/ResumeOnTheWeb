@@ -1,8 +1,8 @@
 import Ingredients from "components/Header/Ingredients";
-import useWindowDimensions, { Breakpoints } from "hooks/useWindowDimensions";
-import NoSSR from "components/NoSSR";
-import Profiles from "components/Header/Profiles";
 import PhotoWall from "components/Header/PhotoWall";
+import Profiles from "components/Header/Profiles";
+import NoSSR from "components/NoSSR";
+import useWindowDimensions, { Breakpoints } from "hooks/useWindowDimensions";
 import Image from "next/image";
 
 const Header: React.FC = () => {

@@ -1,7 +1,7 @@
 import achievementList from "data/achievements";
+import { MdChevronRight } from "react-icons/md";
 import { Section } from "types/Sections";
 import { getSectionHeading } from "utils";
-import { MdChevronRight } from "react-icons/md";
 
 const Achievements = () => (
   <div id={Section.Achievements}>

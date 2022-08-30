@@ -1,6 +1,6 @@
+import Image from "next/image";
 import { Section } from "types/Sections";
 import { getSectionHeading } from "utils";
-import Image from "next/image";
 
 type Skill = {
   id: number;

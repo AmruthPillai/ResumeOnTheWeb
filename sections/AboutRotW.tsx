@@ -1,8 +1,8 @@
 import Button from "components/Button";
 import links from "data/links";
-import { getSectionHeading, openURLInNewTab } from "utils";
-import { Section } from "types/Sections";
 import { MdStar } from "react-icons/md";
+import { Section } from "types/Sections";
+import { getSectionHeading, openURLInNewTab } from "utils";
 
 const AboutRotW = () => (
   <div id={Section.AboutRotW}>
@@ -40,7 +40,7 @@ const AboutRotW = () => (
       </p>
     </div>
 
-    <Button icon={MdStar} className="mt-8" onClick={() => openURLInNewTab(links.github)}>
+    <Button icon={MdStar} className="mt-8" onClick={() => openURLInNewTab(links.repository)}>
       Star this Project on GitHub
     </Button>
   </div>

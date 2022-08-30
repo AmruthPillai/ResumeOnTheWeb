@@ -1,6 +1,6 @@
-import { BiLinkExternal } from "react-icons/bi";
 import clsx from "clsx";
 import type { IconType } from "react-icons";
+import { BiLinkExternal } from "react-icons/bi";
 
 type Props = {
   icon?: IconType;

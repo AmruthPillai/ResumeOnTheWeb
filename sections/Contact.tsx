@@ -1,10 +1,10 @@
+import { useFormspark } from "@formspark/use-formspark";
 import Button from "components/Button";
 import Input from "components/Input";
-import { Section } from "types/Sections";
-import { getSectionHeading } from "utils";
-import { useFormspark } from "@formspark/use-formspark";
 import { useForm } from "react-hook-form";
 import { FaPaperPlane } from "react-icons/fa";
+import { Section } from "types/Sections";
+import { getSectionHeading } from "utils";
 
 type FormData = {
   name: string;

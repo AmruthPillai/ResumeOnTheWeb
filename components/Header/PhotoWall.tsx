@@ -1,6 +1,6 @@
 import { css } from "@emotion/css";
-import Image from "next/image";
 import clsx from "clsx";
+import Image from "next/image";
 
 const photos: string[] = [
   "/images/photo-wall/photo-3jn2.jpg",

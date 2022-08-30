@@ -1,9 +1,9 @@
-import { DribbbleShot, Section } from "types/Sections";
-import ImageLink from "components/ImageLink";
 import Button from "components/Button";
-import { getSectionHeading, openURLInNewTab } from "utils";
+import ImageLink from "components/ImageLink";
 import links from "data/links";
 import { FiDribbble } from "react-icons/fi";
+import { DribbbleShot, Section } from "types/Sections";
+import { getSectionHeading, openURLInNewTab } from "utils";
 
 type Props = {
   dribbbleShots: DribbbleShot[];

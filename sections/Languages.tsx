@@ -1,9 +1,9 @@
-import languagesList from "data/languages";
-import { Section } from "types/Sections";
-import { getSectionHeading } from "utils";
-import Typewriter from "typewriter-effect";
 import clsx from "clsx";
+import languagesList from "data/languages";
 import { Fragment } from "react";
+import { Section } from "types/Sections";
+import Typewriter from "typewriter-effect";
+import { getSectionHeading } from "utils";
 
 const Languages: React.FC = () => {
   return (

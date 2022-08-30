@@ -64,7 +64,6 @@ Since the project has been set up with NextJS, the build process has become easi
 
 1. Make sure you have PNPM installed on your computer, by visiting the https://pnpm.io/installation
 
-
 2. Clone the repository and go into the working directory
 
 ```console

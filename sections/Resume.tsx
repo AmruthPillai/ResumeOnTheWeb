@@ -1,8 +1,8 @@
 import Button from "components/Button";
 import ImageLink from "components/ImageLink";
-import { getSectionHeading, openURLInNewTab } from "utils";
 import links from "data/links";
 import { Section } from "types/Sections";
+import { getSectionHeading, openURLInNewTab } from "utils";
 
 const Resume = () => (
   <div id={Section.Resume}>

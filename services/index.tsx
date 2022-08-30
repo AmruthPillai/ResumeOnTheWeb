@@ -1,6 +1,6 @@
-import { Article, DribbbleShot, InstagramMedia } from "types/Sections";
-import cached_instagramMedia from "public/cached/instagramMedia.json";
 import cached_dribbbleShots from "public/cached/dribbbleShots.json";
+import cached_instagramMedia from "public/cached/instagramMedia.json";
+import { Article, DribbbleShot, InstagramMedia } from "types/Sections";
 
 export const getArticles = async (): Promise<Article[]> => {
   const pageSize = 6;

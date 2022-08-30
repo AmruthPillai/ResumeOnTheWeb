@@ -1,7 +1,7 @@
 import certificationsList from "data/certifications";
+import { MdChevronRight } from "react-icons/md";
 import { Section } from "types/Sections";
 import { getSectionHeading } from "utils";
-import { MdChevronRight } from "react-icons/md";
 
 const Certifications = () => (
   <div id={Section.Certifications}>

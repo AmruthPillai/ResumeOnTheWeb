@@ -1,13 +1,13 @@
+import Tippy from "@tippyjs/react";
 import { ThemeContext } from "contexts/ThemeProvider";
 import { sectionsArray } from "data/sections";
-import { Section } from "types/Sections";
 import useWindowDimensions, { Breakpoints } from "hooks/useWindowDimensions";
-import Tippy from "@tippyjs/react";
 import Image from "next/image";
-import { animateScroll, scroller } from "react-scroll";
 import { useContext } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { FiMenu } from "react-icons/fi";
+import { animateScroll, scroller } from "react-scroll";
+import { Section } from "types/Sections";
 
 const Navigation = () => {
   const { width } = useWindowDimensions();

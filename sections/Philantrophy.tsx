@@ -1,7 +1,7 @@
 import philantrophyList from "data/philantrophy";
+import { MdChevronRight } from "react-icons/md";
 import { Section } from "types/Sections";
 import { getSectionHeading } from "utils";
-import { MdChevronRight } from "react-icons/md";
 
 const Philantrophy = () => (
   <div id={Section.Philantrophy}>

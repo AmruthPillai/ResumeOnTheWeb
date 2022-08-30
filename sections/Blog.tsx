@@ -1,9 +1,9 @@
-import ImageLink from "components/ImageLink";
-import { formatDateString, getSectionHeading, openURLInNewTab } from "utils";
 import Button from "components/Button";
+import ImageLink from "components/ImageLink";
 import links from "data/links";
-import { Article, Section } from "types/Sections";
 import { FaDev } from "react-icons/fa";
+import { Article, Section } from "types/Sections";
+import { formatDateString, getSectionHeading, openURLInNewTab } from "utils";
 
 type Props = {
   articles: Article[];

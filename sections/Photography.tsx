@@ -1,9 +1,9 @@
-import { InstagramMedia, Section } from "types/Sections";
-import ImageLink from "components/ImageLink";
 import Button from "components/Button";
-import { getSectionHeading, openURLInNewTab } from "utils";
+import ImageLink from "components/ImageLink";
 import links from "data/links";
 import { FaInstagram } from "react-icons/fa";
+import { InstagramMedia, Section } from "types/Sections";
+import { getSectionHeading, openURLInNewTab } from "utils";
 
 type Props = {
   instagramMedia: InstagramMedia[];

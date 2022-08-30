@@ -1,8 +1,8 @@
-import links from "data/links";
-import { FaDev, FaDribbble, FaFacebookF, FaGithubAlt, FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import Tippy from "@tippyjs/react";
 import clsx from "clsx";
+import links from "data/links";
 import type { IconType } from "react-icons";
+import { FaDev, FaDribbble, FaFacebookF, FaGithubAlt, FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 
 type Profile = {
   title: string;
