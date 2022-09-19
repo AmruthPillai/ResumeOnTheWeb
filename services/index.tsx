@@ -15,6 +15,8 @@ export const getArticles = async (): Promise<Article[]> => {
     const res = await fetch(url, { headers: { "api-key": apiKey } });
     const data: Article[] = await res.json();
 
+    if (!data) throw new Error("Error occurred while retrieving DEV articles.");
+
     return data;
   } catch {
     return [];
@@ -33,6 +35,8 @@ export const getInstagramMedia = async (): Promise<InstagramMedia[]> => {
     const res = await fetch(url);
     const { data } = (await res.json()) as { data: InstagramMedia[] };
 
+    if (!data) throw new Error("Error occurred while retrieving Instagram media.");
+
     return data;
   } catch {
     return cached_instagramMedia.data as InstagramMedia[];
@@ -49,6 +53,8 @@ export const getDribbbleShots = async (): Promise<DribbbleShot[]> => {
   try {
     const res = await fetch(url, { headers: { Authorization: `Bearer ${accessToken}` } });
     const data = (await res.json()) as DribbbleShot[];
+
+    if (!data) throw new Error("Error occurred while retrieving Dribbble shots.");
 
     return data;
   } catch {
