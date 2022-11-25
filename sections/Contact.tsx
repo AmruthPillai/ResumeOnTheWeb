@@ -1,6 +1,7 @@
 import { useFormspark } from "@formspark/use-formspark";
 import Button from "components/Button";
 import Input from "components/Input";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaPaperPlane } from "react-icons/fa";
 import { Section } from "types/Sections";
@@ -19,9 +20,28 @@ const Contact = () => {
     formState: { errors },
   } = useForm<FormData>();
 
+  const [isSubmitted, setSubmitted] = useState(false);
+
   const [submit, submitting] = useFormspark({ formId: "LVr3mgSu" });
 
-  const onSubmit = handleSubmit(async (data) => submit(data));
+  const onSubmit = handleSubmit(async (data) => {
+    await submit(data);
+    setSubmitted(true);
+  });
+
+  if (isSubmitted) {
+    return (
+      <div id={Section.Contact} className="lg:w-1/2">
+        {getSectionHeading(Section.Contact)}
+
+        <p className="text-lg leading-loose">
+          Thank you for your message.
+          <br />
+          I&apos;ll get back to you as soon as possible.
+        </p>
+      </div>
+    );
+  }
 
   return (
     <div id={Section.Contact} className="lg:w-1/2">
