@@ -23,6 +23,7 @@
     "react-hook-form": "^7.45.4",
     "react-icons": "^4.10.1",
     "react-scroll": "^1.8.9",
+    "sharp": "^0.32.4",
     "tippy.js": "^6.3.7",
     "typewriter-effect": "^2.20.1"
   },
