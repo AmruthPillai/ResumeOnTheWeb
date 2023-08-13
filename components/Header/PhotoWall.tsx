@@ -26,19 +26,20 @@ const PhotoWall: React.FC<Props> = ({ size = 512 }) => {
             css`
               width: ${size / 4}px;
               height: ${size}px;
+
               &:hover {
                 width: ${size / 2}px;
               }
-            `
+            `,
           )}
         >
           <Image
+            fill
             priority
             src={photo}
-            layout="fill"
-            objectFit="cover"
-            className={clsx({ "rounded-l": index === 0, "rounded-r": index === photos.length - 1 })}
             alt="Amruth Pillai"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className={clsx("object-cover", { "rounded-l": index === 0, "rounded-r": index === photos.length - 1 })}
           />
         </div>
       ))}

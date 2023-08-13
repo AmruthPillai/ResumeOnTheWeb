@@ -27,8 +27,9 @@ const Photography: React.FC<Props> = ({ instagramMedia }) => (
               src={src}
               key={media.id}
               href={media.permalink}
-              dimensions={{ width: 512, height: 512 }}
+              imageClassName="aspect-square"
               alt={`${media.id} - Amruth Pillai`}
+              dimensions={{ width: 512, height: 512 }}
             />
           );
         })}

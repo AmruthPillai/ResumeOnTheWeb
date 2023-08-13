@@ -76,8 +76,8 @@ const Education: React.FC<Props> = ({ data, isFirst, isLast }) => (
     <div className="-ml-2 mt-8 flex-shrink-0 relative w-3 h-3 rounded-full shadow-lg bg-teal-500/80 dark:bg-white/80 group-hover:w-6 transition-[width]" />
 
     <div className="mt-5 ml-8 grid gap-2 pb-2">
-      <div className="relative w-9 h-9">
-        <Image src={data.logo} layout="fill" objectFit="contain" alt={data.institution} />
+      <div className="relative w-10 h-10">
+        <Image src={data.logo} width={40} height={40} alt={data.institution} className="object-contain" />
       </div>
 
       <div>

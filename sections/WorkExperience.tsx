@@ -157,8 +157,8 @@ const WorkExperience: React.FC<Props> = ({ data, isFirst, isLast }) => (
     <div className="-ml-2 mt-8 flex-shrink-0 relative w-3 h-3 rounded-full shadow-lg bg-teal-500/80 dark:bg-white/80 group-hover:w-6 transition-[width]" />
 
     <div className="mt-5 ml-8 grid gap-2 pb-2">
-      <div className="relative w-[100px] h-[40px]">
-        <Image src={data.logo} layout="fill" objectFit="contain" alt={data.name} />
+      <div className="relative w-[100px] h-10">
+        <Image src={data.logo} alt={data.name} width={100} height={40} className="object-contain" />
       </div>
 
       <div>

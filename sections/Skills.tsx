@@ -95,7 +95,7 @@ const Skills = () => (
           className="px-4 py-2 border border-neutral-900/10 dark:border-neutral-50/10 hover:border-neutral-900/30 dark:hover:border-neutral-50/30 rounded flex items-center gap-4 transition-colors duration-700 hover:duration-100"
         >
           <div className="w-5 h-5">
-            <Image src={skill.icon} width={20} height={20} alt={skill.name} objectFit="contain" />
+            <Image src={skill.icon} width={20} height={20} alt={skill.name} className="object-contain" />
           </div>
 
           <div className="min-w-0 flex-1 flex flex-col">
