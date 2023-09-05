@@ -1,5 +1,4 @@
 import clsx from "clsx";
-import Image from "next/image";
 import { BiLinkExternal } from "react-icons/bi";
 
 type Dimensions = { width: number; height: number };
@@ -17,7 +16,7 @@ const ImageLink: React.FC<Props> = ({ src, alt, href = "#", height, dimensions, 
   <div className="relative overflow-hidden shadow rounded group">
     <a href={href} target="_blank" rel="noreferrer" className="flex">
       {dimensions ? (
-        <Image
+        <img
           src={src}
           alt={alt}
           width={dimensions.width}
@@ -26,7 +25,7 @@ const ImageLink: React.FC<Props> = ({ src, alt, href = "#", height, dimensions, 
         />
       ) : (
         <div style={{ height }} className="w-full relative rounded shadow-lg overflow-hidden min-h-[250px]">
-          <Image
+          <img
             src={src}
             alt={alt}
             width={height! * 2}

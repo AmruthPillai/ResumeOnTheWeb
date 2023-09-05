@@ -2,9 +2,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  images: {
-    domains: ["dev.to", "res.cloudinary.com", "cdn.dribbble.com", "scontent.cdninstagram.com"],
-  },
+  images: { unoptimized: true },
 };
 
 module.exports = nextConfig;
